@@ -197,6 +197,95 @@ for(let [key,value] of map.entries()){
 }
 console.log("ans>>>",ans)
 
+Given an array of Employees with name,marks. Find out the maximum average marks from the list
+const arr = [
+  ["Alia","-678"],["Bobby","100"],["Alex","223"],
+  ["Alex","-23"],["Bobby","723"]];
+let map = new Map()
+for(let i=0;i<arr.length;i++){
+    if(map.has(arr[i][0])){
+      map.set(arr[i][0],[map.get(arr[i][0])[0]+1,map.get(arr[i][0])[1]+Number(arr[i][1])])
+    }else{
+      map.set(arr[i][0],[1,Number(arr[i][1])])
+    }
+}
+let ans = []
+for(let [key, value] of map.entries()){
+  ans.push(Math.floor(value[1]/value[0]))
+}
+console.log("ans>>>",Math.max(...ans))
+
+Possible to make a divisible by 3 number using all digits in an array
+
+let arr = [ 50, 90 ];
+
+let sum=0;
+for(let i=0;i<arr.length;i++){
+  sum+=arr[i]
+}
+if(sum%3==0)
+    console.log(true);
+else 
+    console.log(false)
+
+Print words of a string in reverse order. Let there be a string say “I AM A TESTER So, the output should be TESTER A AM I”
+str.split(' ').reverse().join(' ')
+
+Find the first repeated word in a string. Input : "Ravi had been saying that he had been there" .Output : had
+let str = 'been Ravi had been saying that he had been there';
+let arr = str.split(' ');
+let map = new Map();
+
+for(let i=0;i<arr.length;i++){
+    if(map.has(arr[i])){
+        map.set(arr[i],map.get(arr[i])+1)
+    }else{
+      map.set(arr[i],1)
+    }
+}
+for(let i=0;i<arr.length;i++){
+    if(map.get(arr[i]) > 1){
+      console.log("word>>>",arr[i]);
+      break;
+    }
+}
+
+Program to find Smallest and Largest Word in a String.Input :This is a test string Output : Minimum length word: is Maximum length word: string
+
+let str = 'GeeksforGeeks A Computer Science portal for Geeks'
+let arr = str.split(' ');
+let max = Number.MIN_SAFE_INTEGER;
+let min = Number.MAX_SAFE_INTEGER;
+let maw='';
+let miw=''
+for(let i=0;i<arr.length;i++){
+ 
+  if(arr[i].length > max){
+    max = arr[i].length
+    maw=arr[i]
+  }
+  if(arr[i].length < min){
+    min = arr[i].length
+    miw=arr[i]
+  }
+
+}
+console.log(maw,"  ",miw)
+
+Given a string str and a character x, find last index of x in str.
+traverse string from right to left
+
+Given a string and a delimiter character. 
+Split the string based on the delimiter 
+and print the list of resulting sub strings.
+
+Simple split('dl')
+
+
+
+
+
+
 
 
 
