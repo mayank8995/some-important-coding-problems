@@ -279,7 +279,65 @@ Given a string and a delimiter character.
 Split the string based on the delimiter 
 and print the list of resulting sub strings.
 
-Simple split('dl')
+//Given a sentence, task is to remove spaces from the sentence
+//and rewrite in Camel case.
+//It is a style of writing where we don’t have spaces 
+//and all words begin with capital letters.
+//Input  : I got intern at geeksforgeeks
+//Output : IGotInternAtGeeksforgeeks
+
+let input  = 'I got intern at geeksforgeeks';
+let str="";
+let ans=[];
+for(var i=0;i<input.length;i++){
+        if (input[i] == ' ')
+        {
+            // conversion into upper case
+            str+= input[i+1].toUpperCase();
+            i++;
+             
+        }
+        else{
+         
+            str+= input[i];
+            }
+}
+console.log("str>>>>",str)
+
+// Given a string, sort it in descending order. Input : mupursingh Output : uusrpnmihg
+
+/*
+Given an array A[] of integers find sum of product of all pairs of array elements
+Input : A[] = {1, 3, 4}
+Output : 19
+Possible Pairs : (1,3), (1,4), (3,4)
+Sum of Product : 1*3 + 1*4 + 3*4 = 19
+
+based on (a+b+c)^2 = a2+b2+c2 + 2(ab+bc+ca)
+*/
+
+
+//2nd smallest element of an unsorted array.
+
+const arr = [3,2,4,5,8,11,9,24,13];
+let fmax=arr[0];
+let smax=arr[0];
+for(let i=0;i<arr.length;i++){
+    if(arr[i]<fmax){
+        smax=fmax;
+        fmax=arr[i];
+    }else if(smax > arr[i]){
+        smax=arr[i]
+    }
+}
+
+console.log(fmax,"  ",smax)
+
+
+
+
+
+
 
 
 
