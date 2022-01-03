@@ -333,6 +333,40 @@ for(let i=0;i<arr.length;i++){
 
 console.log(fmax,"  ",smax)
 
+/*Largest substring with unique characters 
+e.g. aaabcbdeaf Output : cbdeaf*/
+let str = 'a';
+let map = new Map();
+let st=0;
+let currlen;
+let maxlen=0;
+let start;
+map.set(str[0],0)
+for(var i=1;i<str.length;i++){
+  
+  if(!map.has(str[i])){
+    map.set(str[i],i)
+  }else{
+    if(map.get(str[i]) >= st){
+      
+      currlen = i-st;
+      if(maxlen < currlen){
+        maxlen = currlen;
+        start = st;
+      }
+      
+      st = map.get(str[i])+1
+    }
+    map.set(str[i],i)
+  }
+  
+}
+if(maxlen < i-st){
+  maxlen = i-st;
+  start = st;
+}
+   
+console.log(str.substr(start,maxlen))
 
 
 
