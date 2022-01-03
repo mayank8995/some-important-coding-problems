@@ -367,7 +367,14 @@ if(maxlen < i-st){
 }
    
 console.log(str.substr(start,maxlen))
+/*
+  Arrange given numbers to form the biggest number
+*/
+let arr = [1, 34, 3, 98, 9, 76, 45, 4];
 
+console.log(arr.sort((first,second)=>{
+  return (''+first+second) > (''+second+first) ? -1:1
+}).join(''))
 
 
 
