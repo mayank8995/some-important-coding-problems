@@ -413,11 +413,31 @@ function smallestSubWithSum(arr, n, x)
     }
     return min_len;
 }
-
-
-
 console.log(">>>>",smallestSubWithSum(arr,arr.length,51));
+/*convert in following format*/
+let arr = [
+        {cat: 2},
+        {dog: 3},
+        {cow: 5},
+        {cat: 3},
+        {cat: 2},
+        {dog: 1},
+        {cow: 3},
+]
 
+// output - {{cat:7},{dog:4}, {cow:8}}
+
+console.log(arr.reduce((acc,curr) =>{
+  
+  console.log("acc>>",acc," curr>>",curr)
+  if(acc[Object.keys(curr)[0]]){
+    acc[Object.keys(curr)[0]]+=Object.values(curr)[0]
+  }else{
+    acc[Object.keys(curr)[0]] = Object.values(curr)[0]
+  }
+  return acc
+  
+},{}))
 
 
 
