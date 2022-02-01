@@ -439,6 +439,22 @@ console.log(arr.reduce((acc,curr) =>{
   
 },{}))
 
+/*
+  Shuffle 2n integers in format {a1, b1, a2, b2, a3, b3, ……, an, bn} 
+  without using extra space
+  Brute Force Approach
+*/
+
+let arr = [1,2,3,4,5,6];
+//output - [1,4,2,5,3,6]
+
+let n = arr.length/2;
+
+for(let i=0, q=1, k=n;i<n;i++,q++,k++){
+  for(let j=k;j>i+q;j--){
+    swap(a[j-1],a[j])
+  }
+}
 
 
 
