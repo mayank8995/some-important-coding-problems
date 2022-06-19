@@ -1,7 +1,7 @@
 # some-important-coding-problems
 
 
-First unique character of a string
+1. First unique character of a string
 let atr = 'qcaabdce';
 let map = new Map();
 
@@ -19,7 +19,7 @@ for(let i=0;i<atr.length;i++){
        break;
      }
 }
-second smallest element in the array 
+2. second smallest element in the array 
 const arr = [5,6,1,2,4,3];
 let fmin=arr[0];
 let smin=arr[0];
@@ -34,11 +34,11 @@ for(let i=0;i<arr.length;i++){
 }
 console.log("fmin>>>",fmin," smin>>>",smin);
 
-second minimum element in sorted rotated array
+3. second minimum element in sorted rotated array
 
 
 
-minimum element in sorted array
+4. minimum element in sorted array
 
 const brr = [5,6,1,2,4,3];
 let l = 0;
@@ -56,7 +56,7 @@ let r = brr.length-1;
     }
   }
 
-Print matrix in spiral form e.g. {{1,2,3},{4,5,6},{7,8,9}} Output . 1,2,3,6,9,8,7,4,5
+5 .Print matrix in spiral form e.g. {{1,2,3},{4,5,6},{7,8,9}} Output . 1,2,3,6,9,8,7,4,5
 See again
  
 let arr = [[1,2,3],[4,5,6],[7,8,9]]
@@ -100,7 +100,7 @@ let arr = [[1,2,3],[4,5,6],[7,8,9]]
     }
   }
 
-Add two fractions
+6. Add two fractions
 Input:  1/5 + 3/15
 Output: 2/5
 
@@ -134,7 +134,7 @@ function AddFraction(num1,den1,num2,den2){
 
   AddFraction(1,5,3,15)
 
-Find out the number of pair from given integer array whose sum isequal to a given number.
+7. Find out the number of pair from given integer array whose sum isequal to a given number.
 
 const arr = [1, 5, 7, -1, 5 ]
 const sum = 6;
@@ -152,7 +152,7 @@ for(let i=0;i<arr.length;i++){
 }
 console.log("amns>>>",ans)
 
-Missing characters to make a string Pangram
+8. Missing characters to make a string Pangram
 let str = 'The quick brown fox jumps'.toLowerCase()
 let map = new Map()
 let ans=''
@@ -168,7 +168,7 @@ for(let i=97;i<=122;i++){
 }
 console.log("ans>>>",ans)
 
-Check if a number is a power of another number
+9. Check if a number is a power of another number
 let m=8;
 let n=2;
 let p=n;
@@ -180,7 +180,7 @@ if(p==m)
 else 
   console.log(false);
 
-Given Input,print the following input: “SSSSSTTPPQ” Output:“5S2T2P1Q”
+10. Given Input,print the following input: “SSSSSTTPPQ” Output:“5S2T2P1Q”
 let str = "SSSSSTTPPQ"
 let map = new Map()
 
@@ -197,7 +197,7 @@ for(let [key,value] of map.entries()){
 }
 console.log("ans>>>",ans)
 
-Given an array of Employees with name,marks. Find out the maximum average marks from the list
+11. Given an array of Employees with name,marks. Find out the maximum average marks from the list
 const arr = [
   ["Alia","-678"],["Bobby","100"],["Alex","223"],
   ["Alex","-23"],["Bobby","723"]];
@@ -215,7 +215,7 @@ for(let [key, value] of map.entries()){
 }
 console.log("ans>>>",Math.max(...ans))
 
-Possible to make a divisible by 3 number using all digits in an array
+12. Possible to make a divisible by 3 number using all digits in an array
 
 let arr = [ 50, 90 ];
 
@@ -228,10 +228,10 @@ if(sum%3==0)
 else 
     console.log(false)
 
-Print words of a string in reverse order. Let there be a string say “I AM A TESTER So, the output should be TESTER A AM I”
+13. Print words of a string in reverse order. Let there be a string say “I AM A TESTER So, the output should be TESTER A AM I”
 str.split(' ').reverse().join(' ')
 
-Find the first repeated word in a string. Input : "Ravi had been saying that he had been there" .Output : had
+14. Find the first repeated word in a string. Input : "Ravi had been saying that he had been there" .Output : had
 let str = 'been Ravi had been saying that he had been there';
 let arr = str.split(' ');
 let map = new Map();
@@ -250,7 +250,7 @@ for(let i=0;i<arr.length;i++){
     }
 }
 
-Program to find Smallest and Largest Word in a String.Input :This is a test string Output : Minimum length word: is Maximum length word: string
+15. Program to find Smallest and Largest Word in a String.Input :This is a test string Output : Minimum length word: is Maximum length word: string
 
 let str = 'GeeksforGeeks A Computer Science portal for Geeks'
 let arr = str.split(' ');
@@ -272,10 +272,10 @@ for(let i=0;i<arr.length;i++){
 }
 console.log(maw,"  ",miw)
 
-Given a string str and a character x, find last index of x in str.
+16. Given a string str and a character x, find last index of x in str.
 traverse string from right to left
 
-Given a string and a delimiter character. 
+17. Given a string and a delimiter character. 
 Split the string based on the delimiter 
 and print the list of resulting sub strings.
 
@@ -307,7 +307,7 @@ console.log("str>>>>",str)
 // Given a string, sort it in descending order. Input : mupursingh Output : uusrpnmihg
 
 /*
-Given an array A[] of integers find sum of product of all pairs of array elements
+18. Given an array A[] of integers find sum of product of all pairs of array elements
 Input : A[] = {1, 3, 4}
 Output : 19
 Possible Pairs : (1,3), (1,4), (3,4)
@@ -317,7 +317,7 @@ based on (a+b+c)^2 = a2+b2+c2 + 2(ab+bc+ca)
 */
 
 
-//2nd smallest element of an unsorted array.
+19. //2nd smallest element of an unsorted array.
 
 const arr = [3,2,4,5,8,11,9,24,13];
 let fmax=arr[0];
@@ -333,7 +333,7 @@ for(let i=0;i<arr.length;i++){
 
 console.log(fmax,"  ",smax)
 
-/*Largest substring with unique characters 
+20. /*Largest substring with unique characters 
 e.g. aaabcbdeaf Output : cbdeaf*/
 let str = 'a';
 let map = new Map();
@@ -377,7 +377,7 @@ console.log(arr.sort((first,second)=>{
 }).join(''))
 
 /*
-Find the smallest subarray whose sum is equal or greater than thetarget value
+21. Find the smallest subarray whose sum is equal or greater than thetarget value
 */
 
 const arr = [1,4,45,6,0,19];
@@ -440,7 +440,7 @@ console.log(arr.reduce((acc,curr) =>{
 },{}))
 
 /*
-  Shuffle 2n integers in format {a1, b1, a2, b2, a3, b3, ……, an, bn} 
+22.   Shuffle 2n integers in format {a1, b1, a2, b2, a3, b3, ……, an, bn} 
   without using extra space
   Brute Force Approach
 */
@@ -456,10 +456,89 @@ for(let i=0, q=1, k=n;i<n;i++,q++,k++){
   }
 }
 
+# Trees
+
+1. Level order traversal (iterative)
+
+solve : function(A){
+        let ans = [];
+        let curr = [];
+        let queue = [];
+        if(A == null)
+            return; 
+        queue.push(A);
+        queue.push(null);
+        // ans.push(A.data);
+        while(queue.length !==0 ){
+            let node = queue.shift();
+            // console.log(node)
+            if(node === null){
+                // queue.shift()
+                curr = [];
+                if(queue.length !== 0){
+                    queue.push(null);
+                }
+            }
+            else{
+            // console.log("node data>>",node.data)
+                if(node.left !== null){
+                    queue.push(node.left);
+                    // ans.push(node.data)
+                }
+                if(node.right !== null){
+                    queue.push(node.right);
+                    // ans.push(node.data)
+                }
+                // console.log("ans>>>",ans)
+                curr.push(node.data);
+            }
+            
+        }       
+        return ans;
+	}
 
 
+2. Left view of binary tree
 
+# idea - The idea is to do a simple level order traversal, the only extra thing that needs to be done is to print the value of the first node at each level in the tree.
 
+solve : function(A){
+        let ans = [];
+        let curr = [];
+        let queue = [];
+        if(A == null)
+            return; 
+        queue.push(A);
+        queue.push(null);
+        // ans.push(A.data);
+        while(queue.length !==0 ){
+            let node = queue.shift();
+            // console.log(node)
+            if(node === null){
+                // queue.shift();
+                ans.push(curr.shift());
+                curr = [];
+                if(queue.length !== 0){
+                    queue.push(null);
+                }
+            }
+            else{
+            // console.log("node data>>",node.data)
+                if(node.left !== null){
+                    queue.push(node.left);
+                    // ans.push(node.data)
+                }
+                if(node.right !== null){
+                    queue.push(node.right);
+                    // ans.push(node.data)
+                }
+                // console.log("ans>>>",ans)
+                curr.push(node.data);
+            }
+            
+        }       
+        return ans;
+	}
 
 
 
