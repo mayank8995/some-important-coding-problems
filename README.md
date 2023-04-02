@@ -540,6 +540,75 @@ solve : function(A){
         return ans;
 	}
 
+/* Sum all nonnegative intergers up to n */
+function sum(num){
+  if(num==0){
+    return num;
+  }else{
+    return num + sum(num-1);
+  }
+}
+// console.log(sum(3));
+
+/*
+Implement the built-in .length function in a recursive fashion
+*/
+function length(str){
+  if(str === ''){
+    return 0;
+  }else{
+    return length(str.substring(1))+1;
+  }
+}
+console.log("length>>>",length("Mayank"));
+/*
+Implement findRange in a recursive fashion
+*/
+function findRange(a,b){
+  if(a>=(b-1)){
+      return[];
+  }else{
+   return [a+1].concat(findRange(a+1,b));
+  }
+}
+
+console.log(findRange(2,9));
+
+/*
+Challenge 1: Implement flat() function using recursion
+const arr1 = [0, 1, 2, [3, 4,[5,6,7]],8,9,10];
+*/
+// let result=[];
+function Flat(arr,result=[]){
+    for(let i=0 ; i<arr.length ; i++){
+      if(!Array.isArray(arr[i])){
+          result.push(arr[i])
+        }else{
+          Flat(arr[i],result);
+      }
+    }
+  return result;
+}
+// console.log(Flat([0, 1, 2, [3, 4,[5,6,7]],8,9,10]))
+
+/*
+Challenge 2: Implement getElementByClassName() function using recursion
+*/
+
+// function getElementByClassName(className){
+  
+// }
+
+/*
+  Challenge 4: Implement Array.fill() function using recursion
+*/
+function fill(size,number){
+  if(size<=0){
+      return[];
+  }
+    return [number].concat(fill(size-1,number))
+}
+console.log(fill(5,9))
 
 
 
